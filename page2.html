@@ -1,24 +1,31 @@
 <!doctype html>
-<html lang="Default">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="seo, google, site web, site internet, agence design lyon, agence design">
+	<meta name="title" content="La Chouette Agence - Entreprise webdesign Lyon">
+    <meta name="description" content="Contacter La Chouette Agence - Entreprise webdesign Lyon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/et-line.min.css">
+	<link rel="preload" href="fonts/fontawesome-webfont.woff2?v=4.7.0" crossorigin="anonymous" as="font">
+	<link rel="preload" href="fonts/et-line.woff" crossorigin="anonymous" as="font">
+
+	<link rel="preload" href="css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="css/bootstrap.css"></noscript>
+	<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+	<link rel="preload" href="css/et-line.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="css/et-line.css"></noscript>
 	
-    
-	<script src="./js/jquery-2.1.0.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/blocs.min.js"></script>
-	<script src="./js/jqBootstrapValidation.js"></script>
-	<script src="./js/formHandler.js"></script>
-    <title>page2</title>
+	<script src="./js/jquery-2.1.0.js" defer></script>
+	<script src="./js/bootstrap.js" defer></script>
+	<script src="./js/blocs.js" defer></script>
+	<script src="./js/jquery.touchSwipe.js" defer></script>
+	<script src="./js/gmaps.js" defer></script>
+
+    <title>Contact</title>
 
     
 <!-- Analytics -->
@@ -35,7 +42,7 @@
 	<div class="container bloc-sm">
 		<nav class="navbar row">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="atlanta web design logo" height="40" /></a>
+				<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="Logo la chouette agence" height="40" /></a>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
@@ -48,7 +55,7 @@
 					<li>
 					</li>
 					<li>
-						<a href="page2.html">page2 &gt;</a>
+						<a href="page2.html">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -66,7 +73,7 @@
 					Parlons web design !
 				</h1>
 				<p class="text-center mg-lg tc-white tight-width-whitespace">
-					Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+					Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br />
 					Parlez-nous de votre projet en complétant le formulaire ci-dessous.
 				</p>
 			</div>
@@ -80,38 +87,39 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
-				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+				<form id="form_1">
 					<div class="form-group">
-						<label>
+						<label for="name">
 							Nom
-						</label>
+						</label><br />
 						<input id="name" class="form-control" required />
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="email">
 							Adresse email
-						</label>
+						</label><br />
 						<input id="email" class="form-control" type="email" required />
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="input_504">
 							Comment nous avez-vous connu ?
-						</label>
-						<input class="form-control" type="email" required id="input_504" />
+						</label><br />
+						<input class="form-control" type="text" required id="input_504" />
 					</div>
 					<div class="form-group">
-						<label>
-							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						<label for="message">
+							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br />
+						</label>
+						<textarea id="message" class="form-control" rows="6" cols="30" required></textarea>
 					</div> 
 					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
 						Envoyer
 					</button>
-				</form>
+				</form><br />
 			</div>
 			<div class="col-sm-6">
 				<p>
-					contact@lachouetteagence.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
+					contact@lachouetteagence.com<br />2 place Sathonay 69001 Lyon<br />Ouvert de 9h à 18h, du lundi au vendredi<br />
 				</p>
 			</div>
 		</div>
@@ -130,27 +138,27 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<p class="text-center white">
-					La chouette agence - Agence web basée à Lyon.<br>
+					La chouette agence - Agence web basée à Lyon.<br />
 				</p>
 				<div class="row row-no-gutters social">
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+							<a class="social" aria-label="lien vers twitter" href="https://twitter.com/?lang=fr"><i class="fab fa-twitter icon-md"></i></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+							<a class="social" aria-label="lien vers facebook" href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-f icon-md"></i></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+							<a class="social" aria-label="lien vers dribbble" href="https://dribbble.com/"><i class="fab fa-dribbble icon-md"></i></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+							<a class="social" aria-label="lien vers instagram" href="https://www.instagram.com/"><i class="fab fa-instagram icon-md"></i></a>
 						</div>
 					</div>
 				</div>
